@@ -48,3 +48,5 @@ console.log(union.size());
 
 const intersection = union.intersection(set2);
 console.log(intersection.values());
+
+console.log(set.subset(intersection));

@@ -52,4 +52,9 @@ export default class CustomSet {
 
     return new CustomSet(intersectionSet);
   }
+
+  // check if this set is a subset of another set
+  subset(otherSet: CustomSet) {
+    return this.values().every((e) => otherSet.has(e));
+  }
 }
