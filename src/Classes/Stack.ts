@@ -1,11 +1,8 @@
 export default class Stack {
-  private storage: { [key: number]: any };
-  private count: number;
-
-  constructor() {
-    this.storage = {};
-    this.count = 0;
-  }
+  constructor(
+    private storage: { [key: number]: any } = {},
+    private count: number = 0
+  ) {}
 
   // adds a value at the end of the stack
   push(value: any) {
