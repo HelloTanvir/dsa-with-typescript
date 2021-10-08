@@ -39,7 +39,7 @@ export default class CustomSet {
   // union of two sets
   union(otherSet: CustomSet) {
     const unionSet = new Set([...this.collection, ...otherSet.values()]);
-    return [...unionSet];
+    return new CustomSet([...unionSet]);
   }
 
   // intersection of two sets
@@ -50,6 +50,6 @@ export default class CustomSet {
       if (otherSet.has(element)) intersectionSet.push(element);
     });
 
-    return intersectionSet;
+    return new CustomSet(intersectionSet);
   }
 }

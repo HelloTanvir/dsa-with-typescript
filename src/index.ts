@@ -43,4 +43,8 @@ set2.add(2);
 set2.add("b");
 
 const union = set.union(set2);
-console.log(union);
+console.log(union.values());
+console.log(union.size());
+
+const intersection = union.intersection(set2);
+console.log(intersection.values());
