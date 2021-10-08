@@ -1,4 +1,4 @@
-export default class Stack {
+class Stack {
   constructor(
     private storage: { [key: number]: any } = {},
     private count: number = 0
@@ -30,3 +30,19 @@ export default class Stack {
     return this.count;
   }
 }
+
+const testStack = () => {
+  console.log("Stack Test");
+
+  const stack = new Stack();
+
+  stack.push(1);
+  stack.push(2);
+  stack.push(3);
+  console.log(stack.peek());
+  console.log(stack.pop());
+  console.log(stack.length());
+  console.log(stack.peek());
+};
+
+export default testStack;
